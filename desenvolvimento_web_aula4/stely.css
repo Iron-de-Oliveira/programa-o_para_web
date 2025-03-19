@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url(img/image01.png);
+    background-size: 1000px;
+}
+
+form{
+    justify-items: center;
+    max-height: 550px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(0, 0, 0);
+    border: solid  rgb(142, 142, 142) 5px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+p{
+    color: white;
+}
+
+form label{
+    color: rgb(255, 255, 255);
+}
+
+div[id="mostrar_peso"]{
+    display: flex;
+    box-shadow: 0px 0px 10px whitesmoke;
+    padding: 10px 20px 10px 20px;
+    margin:20px 0 10px 0; 
+    border-radius: 8px;
+    border: solid rgb(206, 206, 206) 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+form input[id="peso"]{
+    border-radius: 12px;
+    width: 70px;
+    height: 50px ;
+    padding-left: 15px;
+    background: 0;
+    box-shadow:0px 0px 2px rgb(180, 0, 180);
+    color: rgb(255, 3, 255);
+    text-shadow: 0px 0px 5px rgb(180, 0, 180);
+    font-size: medium;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form input[id="peso"]:hover{
+    color: rgb(0, 255, 255);
+    box-shadow:0px 0px 5px rgb(0, 255, 255);  
+
+}
+
+input[type="submit"]{
+    width: 60px;
+    height: 50px;
+    color: rgb(255, 3, 255);
+    text-shadow: 0px 0px 5px rgb(180, 0, 180);
+    border-radius: 12px;
+    background-color: 0;
+    box-shadow:0px 0px 2px rgb(180, 0, 180);
+    transition: 0.3s;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1.05);
+    color: rgb(0, 255, 255);
+    box-shadow:0px 0px 5px rgb(0, 255, 255);
+}
+
+div[id="mostrar_imc"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 268px;
+    height: 55px;
+    margin: 10px 0 35px 0;
+    gap: 20px;
+    box-shadow: 0px 0px 10px whitesmoke;
+    border-radius: 8px;
+    border: solid rgb(206, 206, 206) 3px;
+    font-size: large;
+}
+
+div[id="IMC"]{
+    display: flex ;
+    justify-content: center;
+    align-items: center ;
+    width: 70px;
+    height: 35px;
+    border: solid rgb(167, 167, 167) 3px;
+    box-shadow: 0px 0px 5px whitesmoke;
+    border-radius: 8px;
+}
+
+div[id="detalhes"]{
+    display: flex ;
+    justify-content: center;
+    justify-items: center ;
+    width: 440px;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px 0 10px 0;
+    box-shadow: 0px 0px 10px whitesmoke;
+    border-radius: 8px;
+}
+
+div[id="mostrar_nome"],
+   [id="mostrar_altura"],
+   [id="mostrar_genero"]{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+div[id="imgs"]{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+    width: 440px;
+    height: 170px;
+    border: solid rgb(64, 0, 255) 3px;
+}
+
+div[id="imgs"] img{
+    width: 100px;
+    filter:saturate(10%)  drop-shadow(0px 0px 3px  #0040ff);
+}
+
+div[id="imgs"] p{
+    width: 103px;
+    height: 40px;
+    text-align: center;
+    align-content: center; 
+}

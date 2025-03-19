@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style01.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        <form id="formulario">
+            
+            <label id="Apelido">Apelido:</label>
+            <input type="text" required id="nome" placeholder="ex:jubulan" >
+
+            <label id="altura01" >Altura</label>
+            
+            <input type="number" step="0.01" id="altura" placeholder="ex: 1.65">
+
+            <label id="genero">Gênero:</label>
+            <div id="option">
+                <button type="button" onclick="genero_feminino()"><img src="img/sign_13481932.png" alt="icone feminino" id="feminino01" value="feminino"></button>
+                <button type="button" onclick="genero_masculino()"><img src="img/man_13481919.png" alt="icone masculino" id="masculino01" value="masculino"></button>
+                <p id="resultado"></p>
+            </div>
+            <div id="calcular">
+                <input type="submit" value="ir para calculadora" id="botão">
+            </div>    
+
+        </form>   
+    <script src="index.js" defer></script>
+
+</body>
+</html>
