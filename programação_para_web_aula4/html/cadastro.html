@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastro</title>
     <link rel="stylesheet" href="/programação_para_web_aula4/css/cadastro.css">
-    <script src="/programação_para_web_aula4/js/cadastro.js"></script>
 </head>
 <body>
     <div class="conteiner">
@@ -28,13 +27,20 @@
             </section>
 
             <section>
-                <input type="submit" value="confirmar" onsubmit="savefomr()">
-                <input type="reset" value="limpar" onreset="clearfomr()">
+                <label for="mensagem">mensagem:</label>
+                <input type="mensagem" name="mensagem" id="mensagem"
+                required>
+            </section>
+
+            <section>
+                <input type="submit" value="confirmar" onsubmit="saveform()">
+                <input type="reset" value="limpar" onreset="clearform()">
             </section>
 
         </form>
     </div>
 
+    <script src="/programação_para_web_aula4/js/cadastro.js"></script>
 
 </body>
 </html>

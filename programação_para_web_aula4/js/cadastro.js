@@ -16,10 +16,10 @@ const FormData  = {
 }
 
 // adiciona os dados ao array
-savedData.push(FormData)
+    saveData.push(FormData)
 
 // salvar o array no localstorage
-localStorage.setItem("FormData", JSON.stringify(savedData));
+localStorage.setItem("FormData", JSON.stringify(saveData));
 
 // exibir alerta de sucesso
 alert("sucesso")
