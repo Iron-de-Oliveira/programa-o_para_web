@@ -4,8 +4,6 @@ function carregar_dados(){
    let altura = localStorage.getItem("altura");
    let nome = localStorage.getItem("nome"); 
    let genero = localStorage.getItem("genero");
-
-//    let peso = document.getElementById("peso").value;
  
    if (!altura || !nome) {
     document.getElementById("display").innerHTML = "Nenhum dado armazenado.";
@@ -26,7 +24,6 @@ function carregar_dados(){
     document.getElementById("genero").innerHTML = `Gênero: ${genero} `;
     document.getElementById("nome01").innerHTML = `Olá ${nome}! `;
     document.getElementById("altura01").innerHTML = ` Sua altura: ${altura}m `;
-    // document.getElementById("peso01").innerHTML = imc.toFixed(2);
 }
 
 function calculo_imc(altura, peso){
@@ -34,12 +31,6 @@ function calculo_imc(altura, peso){
 
 }
 
-// function cor(){
-//     let cor = localStorage.getItem("genero");
-//     return{
-//         gen_mas: cor == "femino"? "drop-shadow(0px 0px 5px #9900ff)" : "",
-//     };
-// }
 
 function resultado_IMC(imc){
     return{

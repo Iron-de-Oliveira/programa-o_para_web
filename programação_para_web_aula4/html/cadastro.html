@@ -1,0 +1,40 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="stylesheet" href="/programação_para_web_aula4/css/cadastro.css">
+    <script src="/programação_para_web_aula4/js/cadastro.js"></script>
+</head>
+<body>
+    <div class="conteiner">
+        <form>
+            <section>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name"
+                required placeholder="nome">
+            </section>
+            
+            <section>
+                <label for="email">email:</label>
+                <input type="email" name="email" id="email"
+                required placeholder="email">
+            </section>
+
+            <section>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha"
+                required>
+            </section>
+
+            <section>
+                <input type="submit" value="confirmar" onsubmit="savefomr()">
+                <input type="reset" value="limpar" onreset="clearfomr()">
+            </section>
+
+        </form>
+    </div>
+
+
+</body>
+</html>

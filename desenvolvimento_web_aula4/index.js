@@ -25,7 +25,6 @@ document.getElementById("formulario").addEventListener("submit", function(event)
 
     let altura = document.getElementById("altura").value;
     let nome = document.getElementById("nome").value;
-    // let genero = document.getElementById("genero").value;
 
     if (!altura || !nome) {
         alert("Por favor, preencha todos os campos!");
