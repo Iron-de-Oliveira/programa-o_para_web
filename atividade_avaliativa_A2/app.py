@@ -1,10 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from models.task import Aluno
 
 app = Flask(__name__)
 
 alunos = []
 aluno_id_control = 1
+
+
+@app.route('/alunos')
+def retornar_pagina():
+   return render_template('cadastro_aluno.html')
 
 
 # Criar uma nova tarefa
