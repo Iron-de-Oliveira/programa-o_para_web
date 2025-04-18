@@ -1,13 +1,13 @@
-class Task:
-    def __init__(self, id, title, description, completed=False) -> None:
+class Aluno:
+    def __init__(self, id, nome, description, completed=False) -> None:
         self.id = id
-        self.title = title
+        self.nome = nome
         self.description = description
         self.completed = completed
     def to_dict(self):
         return {
             "id": self.id,
-            "title": self.title,
+            "nome": self.nome,
             "description": self.description,
             "completed": self.completed
         }

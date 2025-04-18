@@ -14,7 +14,7 @@ def create_aluno():
  data = request.get_json()
  new_aluno = Aluno(id=aluno_id_control, nome=data['nome'],
  description=data.get("description", ""))
- alunos_id_control += 1
+ aluno_id_control += 1
  alunos.append(new_aluno)
  print(alunos)
  return jsonify({"message": "Nova tarefa criada com sucesso"})
@@ -60,9 +60,9 @@ def update_task(id):
     if aluno == None:
         return jsonify({"message": "Não foi possível encontrar aatividade"}), 404
     data = request.get_json()
-    alunos.nome = data['nome']
-    alunos.description = data['description']
-    alunos.completed = data['completed']
+    aluno.nome = data['nome']
+    aluno.description = data['description']
+    aluno.completed = data['completed']
 
     return jsonify({"message": "Tarefa atualizada com sucesso"})
         
