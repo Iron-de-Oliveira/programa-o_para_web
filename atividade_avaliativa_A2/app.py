@@ -75,7 +75,7 @@ def delete_aluno(id):
  for t in alunos:
     if t.id == id:
      aluno = t
-    break
+     break
  if not aluno:
     return jsonify({"message": "Não foi possível encontrar a atividade"}), 404
 
