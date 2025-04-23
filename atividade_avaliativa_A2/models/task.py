@@ -1,13 +1,15 @@
 class Aluno:
-    def __init__(self, id, nome, description, completed=False) -> None:
-        self.id = id
+    def __init__(self, matricula, nome, email, senha, completed=False) -> None:
+        self.matricula = matricula
         self.nome = nome
-        self.description = description
+        self.email = email
         self.completed = completed
+        self.senha = senha
     def to_dict(self):
         return {
-            "id": self.id,
+            "matricula": self.matricula,
             "nome": self.nome,
-            "description": self.description,
+            "email": self.email,
+            "senha": self.senha,
             "completed": self.completed
         }
