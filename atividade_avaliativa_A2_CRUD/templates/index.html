@@ -1,0 +1,42 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div id="pai">
+        <form>
+            <h1>Seja bem vindo!</h1>
+
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" placeholder="nome aqui" 
+            maxlength="40" minlength="10" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="****@gmail.com"
+            required>
+
+            <label for="password"> Senha</label>
+            <input type="password" name="password" id="password" required>
+
+            <input type="button" value="enviar" onclick="coletar_dados()">
+            <input type="reset" value="limpar">
+
+        </form>
+    
+
+        <div id="img">
+            <img src="../static/imgs/image.png" alt="alunos indo para a escola">
+        </div>
+    </div>    
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

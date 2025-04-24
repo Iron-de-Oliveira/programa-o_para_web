@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-from models.task import Aluno
+from .models.task import Aluno
 from database.conexao import conectar
 
 app = Flask(__name__)
