@@ -15,9 +15,17 @@ def gerar_id_unico(cursor):
             return novo_id
 
 # rota para 
-@app.route("/cadastro")
+@app.route("/cadastro.html")
 def retornar_pagina():
-        return render_template("index.html")
+        return render_template("cadastro.html")
+
+@app.route("/segunda_pagina.html")
+def pagina2():
+    return render_template("segunda_pagina.html")
+
+@app.route("/resultado.html")
+def pagina_aluno():
+    return render_template("resultado.html")
 
 # CRIAR ALUNO
 @app.route("/aluno", methods=['POST'])
@@ -42,8 +50,6 @@ def criar_aluno():
     print("Erro ao inserir no banco:", e)
     return jsonify({"message": "Erro ao salvar no banco de dados"}), 500
  return jsonify({"message": "Aluno cadastrado com sucesso!"}), 201
-
-
 
 # EXIBIR ALUNO
 @app.route("/aluno", methods=['GET'])

@@ -27,4 +27,11 @@ function coletar_dados(){
         console.error('Erro:', error);
         alert("Erro ao cadastrar aluno");
     });
+
+    var lista = document.getElementById("form");
+  
+    lista.selectedIndex = 0;
+
+    window.location.href = "segunda_pagina.html"
+
 }

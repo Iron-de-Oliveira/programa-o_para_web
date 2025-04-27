@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: 0;
+}
+
+body{
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+div[id="pai"]{
+    display: flex;
+    align-items: center;
+    height: 250px;
+    width: 350px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 8px;
+
+}
+
+div[id="filho"]{
+    text-align: center;
+}
+
+h1{
+    text-shadow: 0px 2px 3px rgb(124, 192, 255);
+    font-size: 28px;
+    margin: 0 0 15 0;
+}
+
+input{
+    font-size: 18px;
+    height: 55px;
+    width: 135px;
+    background: 0;
+    border: solid black 0.5px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 3px black;
+    margin: 0 5 0 5;
+}
+
+input:hover{
+    cursor: pointer;
+    transition: ease-in 0.2s;
+    transform: scale(1.02);
+    box-shadow:  0px 2px 3px rgb(0, 98, 255);
+    color: rgb(0, 98, 255) ;
+}
