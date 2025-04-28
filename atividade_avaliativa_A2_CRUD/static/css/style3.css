@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+table thead tr th{
+    background-color: aqua;
+    padding: 5 20 5 20;
+    border: solid black 0.7px;
+}
+
+table tbody{
+    
+    text-align: center;
+}
+
+table tbody tr th{
+    padding: 5 20 5 20;
+    border: solid black 0.7px;
+}
+table tbody tr td{
+    padding: 5 20 5 20;
+    border: solid black 0.7px;
+}

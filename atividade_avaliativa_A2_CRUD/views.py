@@ -14,18 +14,31 @@ def gerar_id_unico(cursor):
         if not resultado:
             return novo_id
 
-# rota para 
+# Rota para Cadastrar aluno e coletar dados 
 @app.route("/cadastro.html")
 def retornar_pagina():
         return render_template("cadastro.html")
 
+#Rota de ligação
 @app.route("/segunda_pagina.html")
 def pagina2():
     return render_template("segunda_pagina.html")
 
+# EXIBIR ALUNO
 @app.route("/resultado.html")
-def pagina_aluno():
-    return render_template("resultado.html")
+def tabela_aluno():
+    conexao = conectar()
+    cursor = conexao.cursor()
+
+    cursor.execute("SELECT * FROM aluno_crud")
+    resultados = cursor.fetchall()
+
+    cursor.close()
+    conexao.close()
+
+    
+    return render_template("resultado.html", resultado = resultados)
+
 
 # CRIAR ALUNO
 @app.route("/aluno", methods=['POST'])
@@ -51,21 +64,11 @@ def criar_aluno():
     return jsonify({"message": "Erro ao salvar no banco de dados"}), 500
  return jsonify({"message": "Aluno cadastrado com sucesso!"}), 201
 
-# EXIBIR ALUNO
-@app.route("/aluno", methods=['GET'])
-def mostrar_aluno():
-    conexao = conectar()
-    cursor = conexao.cursor()
-
-    cursor.execute("SELECT * FROM aluno_crud")
-    resultados = cursor.fetchall()
-
-    cursor.close()
-    conexao.close()
-
-    return jsonify(resultados)
 
 # ATUALIZAR ALUNO
+# O objetivo era criar um botão que levasse o usuário a uma página para editar o aluno
+# porem, não foi possivel implementar o método ao front a tempo, mas pelo insomnia é possivel ver a funcionalidade 
+# da função abaix0.
 @app.route("/aluno/<int:id_aluno>", methods=['PUT'])
 def atualizar_aluno(id_aluno):
     data = request.get_json()
@@ -95,6 +98,8 @@ def atualizar_aluno(id_aluno):
 
 
 # DELETAR ALUNO
+# Igualmente ao método para atualizar aluno, o método para Deletar aluno também não foi implementado a tempo,
+# mas pode ser conferido no insomnia.
 @app.route("/aluno/<int:id_aluno>", methods=['DELETE'])
 def deletar_aluno(id_aluno):
     try:
