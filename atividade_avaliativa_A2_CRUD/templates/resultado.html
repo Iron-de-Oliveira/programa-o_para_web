@@ -8,7 +8,7 @@
 
 </head>
 <body>
-
+    
     <table class="table" id="table">
         <thead>
           <tr>
@@ -16,6 +16,7 @@
             <th scope="col">Nome do Aluno</th>
             <th scope="col">Email</th>
             <th scope="col">Senha</th>
+            <th scope="col">Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -25,14 +26,30 @@
                 <th scope="row">{{ item.id_aluno }}</th>
                 <td>{{ item.nome }}</td>
                 <td>{{ item.email }}</td>
-                <td>{{ item.senha }}</td>    
+                <td>{{ item.senha }}</td>  
+                
+                <td>
+                    <button class="btn btn-primary" onclick="abrirFormularioEdicao('{{ item.id_aluno }}', '{{ item.nome }}', '{{ item.email }}', '{{ item.senha }}')">Editar</button>
+                    <button class="btn btn-danger" onclick="deletarAluno('{{ item.id_aluno }}')">Deletar</button>
+                </td>
             </tr>
         {% endfor %}
     
         </tbody>
     </table>
-    
 
+    <div id="form-editar" style="display:none; margin-top: 20px;">
+        <h4>Editar Aluno</h4>
+        <input type="hidden" id="edit-id">
+        <input type="text" id="edit-nome" placeholder="Nome" class="form-control my-2">
+        <input type="email" id="edit-email" placeholder="Email" class="form-control my-2">
+        <input type="password" id="edit-senha" placeholder="Senha" class="form-control my-2">
+        <button class="btn btn-success" onclick="salvarEdicao()">Salvar</button>
+        <button class="btn btn-secondary" onclick="cancelarEdicao()">Cancelar</button>
+    </div>
+
+    <input type="button" value="Home"  onclick="home()">    
+    <script src="{{ url_for('static', filename='js/resultado.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -64,11 +64,6 @@ def criar_aluno():
     return jsonify({"message": "Erro ao salvar no banco de dados"}), 500
  return jsonify({"message": "Aluno cadastrado com sucesso!"}), 201
 
-
-# ATUALIZAR ALUNO
-# O objetivo era criar um botão que levasse o usuário a uma página para editar o aluno
-# porem, não foi possivel implementar o método ao front a tempo, mas pelo insomnia é possivel ver a funcionalidade 
-# da função abaix0.
 @app.route("/aluno/<int:id_aluno>", methods=['PUT'])
 def atualizar_aluno(id_aluno):
     data = request.get_json()
@@ -96,10 +91,6 @@ def atualizar_aluno(id_aluno):
         print("Erro ao atualizar aluno:", e)
         return jsonify({"message": "Erro ao atualizar aluno"}), 500
 
-
-# DELETAR ALUNO
-# Igualmente ao método para atualizar aluno, o método para Deletar aluno também não foi implementado a tempo,
-# mas pode ser conferido no insomnia.
 @app.route("/aluno/<int:id_aluno>", methods=['DELETE'])
 def deletar_aluno(id_aluno):
     try:
